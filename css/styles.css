@@ -1,0 +1,188 @@
+/*Red Hat Display Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+:root{
+
+  /*colors*/
+  --color-white:hsl(0, 0%, 100%);
+  --color-pale-blue:hsl(225, 100%, 94%);
+  --color-bright-blue:hsl(245, 75%, 52%);
+
+  --color-very-pale-blue:hsl(225, 100%, 98%);
+  --color-desaturated-blue:hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+
+  /*radius*/
+  --radius:15px;
+
+  /*font*/
+  --fs-text:1rem;
+  --fs-big:2rem;
+
+  --fw-400:400;
+  --fw-500:500;
+  --fw-700:700;
+  --fw-900:900;
+
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font-family: 'Red Hat Display', sans-serif;
+}
+img{
+  width: 100%;
+}
+button:hover{
+  cursor: pointer;
+}
+body{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/pattern-background-desktop.svg) ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--color-bright-blue);
+}
+
+#container{
+  max-width: 400px;
+  margin-inline:1rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  position: relative;
+  transition: box-shadow 250ms ease-in-out;
+}
+#container:hover{
+ box-shadow: 16px 19px 0px #c652da;
+}
+/*----------------------------
+-----------HEADER-------------
+-----------------------------*/
+.header{
+  width:100%;
+}
+/*----------------------------
+-------------MAIN-------------
+-----------------------------*/
+main{
+  padding: 2rem 2.5rem;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1.7rem;
+}
+/*MAIN TEXT, TITLE*/
+.card-main-text{
+  text-align: center;
+}
+.card-title{
+  margin-bottom: 20px;
+  color:var(--color-dark-blue);
+  font-weight: var(--fw-900);
+}
+.card-text-desc{
+  color:var(--color-desaturated-blue);
+  line-height: 1.6;
+  font-weight: var(--fw-500);
+}
+
+/*PAYING BOX*/
+.card-paying{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-very-pale-blue);
+  border-radius: var(--radius);
+  padding: 1rem;
+  border: 1px solid hsl(223deg 47% 23% / 14%);
+}
+.card-paying-icon{
+  margin-right: 1.2rem;
+}
+.card-paying-icon img{
+  width: 45px;
+}
+.card-paying-link{
+  font-weight: var(--fw-700);
+  font-size: 0.9rem;
+  color: var(--color-bright-blue);
+}
+
+/*PLAN*/
+.plan{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.plan-title{
+  color: var(--color-dark-blue);
+  font-weight: 900;
+}
+.plan span:nth-child(2){
+  color: var(--color-desaturated-blue);
+  font-size: 15px;
+}
+.change-link{
+  color: var(--color-bright-blue);
+  font-weight: 600;
+  font-size: 15px;
+}
+.change-link:hover,
+.card-paying-link:hover{
+  color:hsla(245, 75%, 52%,80%);
+  cursor: pointer;
+}
+
+/*BUTTONS*/
+.card-buttons{
+  width: 100%;
+}
+.btn{
+  width: 100%;
+  height: 41px;
+  border-radius: 7px;
+  font-weight: 600;
+  border: none;
+}
+.proceed-btn{
+  background-color: var(--color-bright-blue);
+  color: var(--color-white);
+}
+.proceed-btn:hover{
+  background-color:hsla(245, 75%, 52%,80%);
+  cursor: pointer;
+}
+.cancel-btn{
+  margin: 14px auto;
+  width: 100%;
+  color: var(--color-desaturated-blue);
+  background-color: transparent;
+}
+.cancel-btn:hover{
+  color:var(--color-bright-blue);
+}
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media (max-width:1000px){
+  body{
+    background-image: url('../images/pattern-background-mobile.svg');
+  }
+}
+@media (max-width:500px){
+  #container{
+    max-width: 325px;
+    
+  }
+  main{
+    padding: 2rem 1.5rem;
+  }
+}
